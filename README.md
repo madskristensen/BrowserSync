@@ -15,7 +15,7 @@ page navigation and scroll position.
 
 ![Browser Sync demo](art/animation.gif)
 
-## Features
+## Feature list
 
 1. Supports **all browsers** and emulators
 2. Typing in input fields is synced across browsers
@@ -33,7 +33,7 @@ toolbar lets you know if Browser Link is connected.
 
 ![Browser Link Tooltip](art/browser-link-tooltip.png)
 
-### Form field sync
+## Form field sync
 This extension registers when typing occurs in these
 HTML elements:
 
@@ -47,10 +47,15 @@ HTML elements:
 <textarea name="text"></textarea>
 ```
 
+**contenteditable="true"**
+```html
+<div contenteditable="true" id="article" />
+```
+
 The elements MUST have either an/or _id_ or _name_ attribute
 for the sync to work.
 
-### Navigation and scroll position
+## Navigation and scroll position
 When you have multiple browser windows open onto the
 website your building in Visual Studio, it is handy to
 be able to navigate all the browsers to the same page on
@@ -64,7 +69,7 @@ That will navigate all the other browses to that same page.
 Hit **CTRL+Alt+Enter** again and all browsers will move
 to the same scroll position.
 
-### Settings
+## Settings
 You can disable Browser Sync very easily from the Browser
 Link dropdown on the Standard toolbar.
 

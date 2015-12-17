@@ -1,27 +1,30 @@
-/// <reference path="../_intellisense/browserlink.intellisense.js" />
+/// <reference path="_intellisense/browserlink.intellisense.js" />
 
 (function (browserLink, $) {
     /// <param name="browserLink" value="bl" />
     /// <param name="$" value="jQuery" />
 
     function syncNavigation(url, xpos, ypos) {
+
         if (location.href !== url) {
             location.href = url;
-        }
-        else {
+        } else {
             window.scrollTo(xpos, ypos);
         }
     }
 
     function syncForm(selector, value) {
-        console.log("recieved: " + value);
-        var element = $(selector);
-        var tagName = element[0].tagName;
 
-        if (tagName === "INPUT" || tagName === "TEXTAREA") {
-            element.val(value);
-        } else {
-            element.html(value);
+        var element = $(selector);
+
+        if (element.length) {
+            var tagName = element[0].tagName;
+
+            if (tagName === "INPUT" || tagName === "TEXTAREA") {
+                element.val(value);
+            } else if (element[0].contentEditable) {
+                element.html(value);
+            }
         }
     }
 
@@ -45,7 +48,7 @@
             if (id) {
                 selector = "#" + id;
             } else if (name) {
-                selector = self[0].tagName + "[name='" + name + "']"
+                selector = self[0].tagName + "[name='" + name + "']";
             }
 
             if (selector) {
@@ -56,9 +59,8 @@
     }
 
     return {
-
         onConnected: connectionHandler, // Fires automatically when Browser Link connects
-        syncNavigate: syncNavigation,
-        syncForm: syncForm
+        syncNavigate: syncNavigation, // Called by SyncEngine.cs
+        syncForm: syncForm  // Called by SyncEngine.cs
     };
 });
