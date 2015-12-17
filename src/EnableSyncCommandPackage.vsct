@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <Extern href="stdidcmd.h"/>
+    <Extern href="vsshlids.h"/>
+
+    <Commands package="guidEnableSyncCommandPackage">
+        <Buttons>
+            <Button guid="guidEnableSyncCommandPackageCmdSet" id="EnableSyncCommandId" priority="0x0100" type="Button">
+                <Parent guid="guidBrowserLinkCmdSet" id="IDG_BROWSERLINK_COMMANDS"/>
+                <Strings>
+                    <ButtonText>Enable Browser Sync</ButtonText>
+                </Strings>
+            </Button>
+        </Buttons>
+    </Commands>
+
+    <Symbols>
+        <!-- This is the package guid. -->
+        <GuidSymbol name="guidEnableSyncCommandPackage" value="{557a6900-91ba-4097-99d0-c0ad2a12a92c}" />
+
+        <!-- This is the guid used to group the menu commands together -->
+        <GuidSymbol name="guidEnableSyncCommandPackageCmdSet" value="{44f3346d-7059-4428-9d81-2f16be71e28e}">
+            <IDSymbol name="EnableSyncCommandId" value="0x0100" />
+        </GuidSymbol>
+
+        <GuidSymbol name="guidBrowserLinkCmdSet" value="{30947ebe-9147-45f9-96cf-401bfc671a82}">
+            <IDSymbol name="IDG_BROWSERLINK_COMMANDS" value="0x2001" />
+        </GuidSymbol>
+    </Symbols>
+</CommandTable>
