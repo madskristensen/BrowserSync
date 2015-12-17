@@ -10,8 +10,6 @@ Download the extension at the
 or get the
 [nightly build](http://vsixgallery.com/extension/10d9b3af-1338-4c45-bc99-4ec38c3a11fb/)
 
-![Browser Link Menu](art/browser-link-menu.png)
-
 ## Features
 
 1. Typing in input fields is synced across browsers
@@ -28,6 +26,51 @@ Hovering over the Browser Link button on the Standard
 toolbar lets you know if Browser Link is connected.
 
 ![Browser Link Tooltip](art/browser-link-tooltip.png)
+
+### Form field sync
+This extension registers when typing occurs in these
+HTML elements:
+
+**Input**
+```html
+<input value="" id="email" />
+```
+
+**Textarea**
+```html
+<textarea name="text"></textarea>
+```
+
+The elements MUST have either an/or _id_ or _name_ attribute
+for the sync to work.
+
+### Navigation and scroll position
+When you have multiple browser windows open onto the
+website your building in Visual Studio, it is handy to
+be able to navigate all the browsers to the same page on
+your site.
+
+Browser Sync makes that easy. Simply navigate to a page
+on your site and hit **CTRL+ALT+Enter** in the browser.
+
+That will navigate all the other browses to that same page.
+
+Hit **CTRL+Alt+Enter** again and all browsers will move
+to the same scroll position.
+
+### Settings
+You can disable Browser Sync very easily from the Browser
+Link dropdown on the Standard toolbar.
+
+![Browser Link Menu](art/browser-link-menu.png)
+
+This will disable both the navigational sync using hotkeys
+as well as the form field sync.
+
+Both of those settings can be individually set in the
+**Tools -> Options -> Web -> Browser Sync** dialog.
+
+![Settings](art/settings.png)
 
 ## License
 

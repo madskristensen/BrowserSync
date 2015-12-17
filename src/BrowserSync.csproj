@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="BrowserLink\SyncEngine.cs" />
     <Compile Include="Commands\EnableSyncCommand.cs" />
+    <Compile Include="Options.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="VSCommandTable.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

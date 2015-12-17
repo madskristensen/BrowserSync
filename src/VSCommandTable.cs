@@ -7,11 +7,11 @@ namespace BrowserSync
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string guidEnableSyncCommandPackageString = "557a6900-91ba-4097-99d0-c0ad2a12a92c";
-        public const string guidEnableSyncCommandPackageCmdSetString = "44f3346d-7059-4428-9d81-2f16be71e28e";
+        public const string guidBrowserSyncPackageString = "557a6900-91ba-4097-99d0-c0ad2a12a92c";
+        public const string guidBrowserSyncPackageCmdSetString = "44f3346d-7059-4428-9d81-2f16be71e28e";
         public const string guidBrowserLinkCmdSetString = "30947ebe-9147-45f9-96cf-401bfc671a82";
-        public static Guid guidEnableSyncCommandPackage = new Guid(guidEnableSyncCommandPackageString);
-        public static Guid guidEnableSyncCommandPackageCmdSet = new Guid(guidEnableSyncCommandPackageCmdSetString);
+        public static Guid guidBrowserSyncPackage = new Guid(guidBrowserSyncPackageString);
+        public static Guid guidBrowserSyncPackageCmdSet = new Guid(guidBrowserSyncPackageCmdSetString);
         public static Guid guidBrowserLinkCmdSet = new Guid(guidBrowserLinkCmdSetString);
     }
     /// <summary>

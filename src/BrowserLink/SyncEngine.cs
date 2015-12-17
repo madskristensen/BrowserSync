@@ -34,19 +34,25 @@ namespace BrowserSync
         [BrowserLinkCallback] // This method can be called from JavaScript
         public void Navigate(int xpos, int ypos)
         {
-            IClientInvoke others = Browsers.AllExcept(new[] { _connection });
-            others.Invoke("syncNavigate", _connection.Url, xpos, ypos);
+            if (VSPackage.Options.EnableNavigationHotkeys)
+            {
+                IClientInvoke others = Browsers.AllExcept(new[] { _connection });
+                others.Invoke("syncNavigate", _connection.Url, xpos, ypos);
 
-            Telemetry.TrackEvent("Sync navigation");
+                Telemetry.TrackEvent("Sync navigation");
+            }
         }
 
         [BrowserLinkCallback] // This method can be called from JavaScript
         public void FormSync(string selector, string value)
         {
-            IClientInvoke others = Browsers.AllExcept(new[] { _connection });
-            others.Invoke("syncForm", selector, value);
+            if (VSPackage.Options.EnableFormSync)
+            {
+                IClientInvoke others = Browsers.AllExcept(new[] { _connection });
+                others.Invoke("syncForm", selector, value);
 
-            Telemetry.TrackEvent("Sync form entry");
+                Telemetry.TrackEvent("Sync form entry");
+            }
         }
     }
 }
