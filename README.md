@@ -52,8 +52,8 @@ HTML elements:
 <div contenteditable="true" id="article" />
 ```
 
-The elements MUST have either an/or _id_ or _name_ attribute
-for the sync to work.
+The elements MUST have either an _id_ and/or _name_
+attribute for the sync to work.
 
 ## Navigation and scroll position
 When you have multiple browser windows open onto the
