@@ -10,12 +10,24 @@ Download the extension at the
 or get the
 [nightly build](http://vsixgallery.com/extension/10d9b3af-1338-4c45-bc99-4ec38c3a11fb/)
 
+![Browser Link Menu](art/browser-link-menu.png)
+
 ## Features
 
 1. Typing in input fields is synced across browsers
 2. Keyboard hotkey to navigate all browsers to same URL
 3. Keyboard hotkey to synchronize scroll position
 4. Settings to enable/disable it all
+
+For Browser Sync to work, make sure that Visual Studio's
+Browser Link is up and running. Do that by running an
+ASP.NET application from Visual Studio in one or more
+browsers.
+
+Hovering over the Browser Link button on the Standard
+toolbar lets you know if Browser Link is connected.
+
+![Browser Link Tooltip](art/browser-link-tooltip.png)
 
 ## License
 

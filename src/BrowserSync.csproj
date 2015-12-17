@@ -48,10 +48,10 @@
   <ItemGroup>
     <Compile Include="BrowserLink\SyncEngine.cs" />
     <Compile Include="Commands\EnableSyncCommand.cs" />
-    <Compile Include="EnableSyncCommandPackage.cs">
+    <Compile Include="VSCommandTable.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EnableSyncCommandPackage.vsct</DependentUpon>
+      <DependentUpon>VSCommandTable.vsct</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\Telemetry.cs" />
@@ -192,10 +192,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <VSCTCompile Include="EnableSyncCommandPackage.vsct">
+    <VSCTCompile Include="VSCommandTable.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
       <Generator>VsctGenerator</Generator>
-      <LastGenOutput>EnableSyncCommandPackage.cs</LastGenOutput>
+      <LastGenOutput>VSCommandTable.cs</LastGenOutput>
     </VSCTCompile>
     <Content Include="Resources\Icon.png">
       <IncludeInVSIX>true</IncludeInVSIX>

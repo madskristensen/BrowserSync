@@ -16,7 +16,7 @@ namespace BrowserSync
         protected override void Initialize()
         {
             Logger.Initialize(this, NAME);
-            Telemetry.Initialize(this, VERSION, "");
+            Telemetry.Initialize(this, VERSION, "5f7a8b5c-b600-46df-9014-b4cadd33d146");
 
             EnableSyncCommand.Initialize(this);
 
