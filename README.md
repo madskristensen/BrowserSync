@@ -3,7 +3,7 @@ A Visual Studio extension for ASP.NET projects that
 leverages Browser Link to synchronize form field entry,
 page navigation and scroll position.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/elr3xt8s6tuoth66?svg=true)](https://ci.appveyor.com/project/madskristensen/webpacktaskrunner)
+[![Build status](https://ci.appveyor.com/api/projects/status/o508r208jkg13ob3?svg=true)](https://ci.appveyor.com/project/madskristensen/browsersync)
 
 Download the extension at the
 [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/5497fd10-b1ba-474c-8991-1438ae47012a)
