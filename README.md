@@ -17,3 +17,6 @@ or get the
 3. Keyboard hotkey to synchronize scroll position
 4. Settings to enable/disable it all
 
+## License
+
+[Apache 2.0](LICENSE)
