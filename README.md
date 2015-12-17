@@ -1,7 +1,4 @@
 # Browser Sync
-A Visual Studio extension for ASP.NET projects that
-leverages Browser Link to synchronize form field entry,
-page navigation and scroll position.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/o508r208jkg13ob3?svg=true)](https://ci.appveyor.com/project/madskristensen/browsersync)
 
@@ -10,6 +7,11 @@ Download the extension at the
 or get the
 [nightly build](http://vsixgallery.com/extension/10d9b3af-1338-4c45-bc99-4ec38c3a11fb/)
 
+------------------------------------------
+
+A Visual Studio extension for ASP.NET projects that
+leverages Browser Link to synchronize form field entry,
+page navigation and scroll position.
 
 ![Browser Sync demo](art/animation.gif)
 
