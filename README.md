@@ -10,12 +10,16 @@ Download the extension at the
 or get the
 [nightly build](http://vsixgallery.com/extension/10d9b3af-1338-4c45-bc99-4ec38c3a11fb/)
 
+
+![Browser Sync demo](art/animation.gif)
+
 ## Features
 
-1. Typing in input fields is synced across browsers
-2. Keyboard hotkey to navigate all browsers to same URL
-3. Keyboard hotkey to synchronize scroll position
-4. Settings to enable/disable it all
+1. Supports **all browsers** and emulators
+2. Typing in input fields is synced across browsers
+3. Keyboard hotkey to navigate all browsers to same URL
+4. Keyboard hotkey to synchronize scroll position
+5. Settings to enable/disable it all
 
 For Browser Sync to work, make sure that Visual Studio's
 Browser Link is up and running. Do that by running an
