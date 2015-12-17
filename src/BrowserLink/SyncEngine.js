@@ -14,7 +14,15 @@
     }
 
     function syncForm(selector, value) {
-        $(selector).val(value);
+        console.log("recieved: " + value);
+        var element = $(selector);
+        var tagName = element[0].tagName;
+
+        if (tagName === "INPUT" || tagName === "TEXTAREA") {
+            element.val(value);
+        } else {
+            element.html(value);
+        }
     }
 
     function connectionHandler() {
@@ -28,7 +36,7 @@
             }
         };
 
-        $("input, textarea").on("keyup", function () {
+        $("body").on("input blur", "input, textarea, [contenteditable]", function () {
             var self = $(this);
             var id = self.attr("id");
             var name = self.attr("name");
@@ -41,7 +49,7 @@
             }
 
             if (selector) {
-                var value = self.val();
+                var value = self.val() || self.html();
                 browserLink.invoke("FormSync", selector, value);
             }
         });
