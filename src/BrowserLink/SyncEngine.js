@@ -13,17 +13,23 @@
         }
     }
 
-    function syncForm(selector, value) {
+    function syncForm(dto) {
 
-        var element = $(selector);
+        var data = JSON.parse(dto);
+        var element = $(data.selector);
 
         if (element.length) {
             var tagName = element[0].tagName;
 
-            if (tagName === "INPUT" || tagName === "TEXTAREA") {
-                element.val(value);
+            if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
+
+                if (element.attr("type") === "checkbox") {
+                    element[0].checked = data.value;
+                } else {
+                    element.val(data.value);
+                }
             } else if (element[0].contentEditable) {
-                element.html(value);
+                element.html(data.value);
             }
         }
     }
@@ -39,21 +45,33 @@
             }
         };
 
-        $("body").on("input blur", "input, textarea, [contenteditable]", function () {
+        $("body").on("change input blur", "input, textarea, select, [contenteditable]", function () {
             var self = $(this);
             var id = self.attr("id");
             var name = self.attr("name");
-            var selector;
+            var dto = {};
+
+            // Abort when insecure and the browsers will throw an exception
+            if (this.type === "file")
+                return;
 
             if (id) {
-                selector = "#" + id;
+                dto.selector = "#" + id;
             } else if (name) {
-                selector = self[0].tagName + "[name='" + name + "']";
+                dto.selector = self[0].tagName + "[name='" + name + "']";
             }
 
-            if (selector) {
-                var value = self.val() || self.html();
-                browserLink.invoke("FormSync", selector, value);
+            if (dto.selector) {
+
+                if (self.attr("type") === "checkbox") {
+                    dto.value = self.is(":checked"); // jQuery always returns "on" for checkbox.val()
+                } else if (self.attr("type") === "radio") {
+                    dto.value = [self.val()]; // Radio button value has to be an array
+                } else {
+                    dto.value = self.val() || self.html();
+                }
+
+                browserLink.invoke("FormSync", JSON.stringify(dto));
             }
         });
     }

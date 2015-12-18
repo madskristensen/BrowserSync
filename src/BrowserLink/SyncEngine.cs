@@ -44,12 +44,12 @@ namespace BrowserSync
         }
 
         [BrowserLinkCallback] // This method can be called from JavaScript
-        public void FormSync(string selector, string value)
+        public void FormSync(string dto)
         {
             if (VSPackage.Options.EnableFormSync)
             {
                 IClientInvoke others = Browsers.AllExcept(new[] { _connection });
-                others.Invoke("syncForm", selector, value);
+                others.Invoke("syncForm", dto);
 
                 Telemetry.TrackEvent("Sync form entry");
             }

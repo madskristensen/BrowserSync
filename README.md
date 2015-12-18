@@ -42,9 +42,37 @@ HTML elements:
 <input value="" id="email" />
 ```
 
+Works for all input types including `range`, `number` and
+`password`, `checkbox`, `datetime`, `color` and `radio`
+to the extend browsers do.
+
+The `file` type isn't supported due to browser security
+constaints.
+
 **Textarea**
 ```html
 <textarea name="text"></textarea>
+```
+
+**Select**
+```html
+<select name="text">
+  <option>First</option>
+  <option>Second</option>
+  <optgroup>
+    <option>Third</option>
+    <option>Fourth</option>
+  </optgroup>
+</select>
+```
+
+**Multi select**
+```html
+<select id="multiple" multiple>
+  <option>First</option>
+  <option>Second</option>
+  <option>Third</option>
+</select>
 ```
 
 **contenteditable="true"**
@@ -52,8 +80,8 @@ HTML elements:
 <div contenteditable="true" id="article" />
 ```
 
-The elements MUST have either an _id_ and/or _name_
-attribute for the sync to work.
+> The elements **MUST** have either an _id_ and/or _name_
+> attribute for the sync to work.
 
 ## Navigation and scroll position
 When you have multiple browser windows open onto the
