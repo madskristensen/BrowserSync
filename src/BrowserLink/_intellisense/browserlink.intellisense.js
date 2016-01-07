@@ -3,7 +3,7 @@
 
 var bl = {
 
-    "call": function () {
+    "invoke": function () {
         /// <signature>
         ///   <summary>Calls a server method defined in the Visual Studio BrowserLink extension.</summary>
         ///   <param name="serverMethodName" type="String">The name of the server method</param>
@@ -15,7 +15,7 @@ var bl = {
         /// </signature>
     },
 
-    "callAsync": function () {
+    "invokeAsync": function () {
         /// <signature>
         ///   <summary>Calls a server method defined in the Visual Studio BrowserLink extension.</summary>
         ///   <param name="serverMethodName" type="String">The name of the server method</param>

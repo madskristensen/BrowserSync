@@ -46,6 +46,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BrowserLink\Overlay.cs" />
     <Compile Include="BrowserLink\SyncEngine.cs" />
     <Compile Include="Commands\EnableSyncCommand.cs" />
     <Compile Include="Options.cs">
@@ -200,6 +201,7 @@
       <Generator>VsctGenerator</Generator>
       <LastGenOutput>VSCommandTable.cs</LastGenOutput>
     </VSCTCompile>
+    <EmbeddedResource Include="BrowserLink\Overlay.js" />
     <Content Include="Resources\Icon.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

@@ -5,16 +5,22 @@ namespace BrowserSync
 {
     public class Options : DialogPage
     {
-        [Category("Browser Sync")]
+        [Category("General")]
         [DisplayName("Enable Form Sync")]
         [Description("Determines if form fields are automatically synced when typing in them.")]
         [DefaultValue(true)]
         public bool EnableFormSync { get; set; } = true;
 
-        [Category("Browser Sync")]
+        [Category("General")]
         [DisplayName("Enable Navigation hotkeys")]
         [Description("Determines if the keybord hotkeys (CTRL+ALT+Enter) in the browser should trigger navigational sync.")]
         [DefaultValue(true)]
         public bool EnableNavigationHotkeys { get; set; } = true;
+
+        [Category("Welcome")]
+        [DisplayName("Show browser overlay")]
+        [Description("Shows the overlay in the browsers containing info about the shortcut key.")]
+        [DefaultValue(true)]
+        public bool ShowOverlay { get; set; } = true;
     }
 }
