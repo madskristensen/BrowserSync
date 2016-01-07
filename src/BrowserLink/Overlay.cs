@@ -9,7 +9,7 @@ namespace BrowserSync
     {
         public BrowserLinkExtension CreateExtensionInstance(BrowserLinkConnection connection)
         {
-            if (VSPackage.Options.ShowOverlay)
+            if (VSPackage.Options.ShowOverlay && VSPackage.Options.EnableNavigationHotkeys)
             {
                 return new OverlayExtension();
             }

@@ -18,7 +18,7 @@
             "</h3>" +
             "<p>" +
                 "You can now use <strong>CTRL+Alt+Enter</strong> to sync all browsers connected to Visual Studio." +
-                " <a href=\"https://visualstudiogallery.msdn.microsoft.com/5741a548-5179-4a77-ad96-fca71535774d\">Learn more</a>" +
+                " <a href=\"https://visualstudiogallery.msdn.microsoft.com/5741a548-5179-4a77-ad96-fca71535774d\" target=\"_blank\">Learn more</a>" +
             "</p>";
 
         // Create <section>
