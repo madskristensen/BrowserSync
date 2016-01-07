@@ -7,8 +7,8 @@
     var _id = "__browserSync";
 
     function showOverlay() {
-        var modal = createModal();
-        document.body.appendChild(modal);
+        var overlay = createOverlay();
+        document.body.appendChild(overlay);
 
         // Close the modal on ESC
         $(document).on("keyup.browsersync", function (e) {
@@ -29,15 +29,15 @@
         }
     }
 
-    function createModal() {
+    function createOverlay() {
 
         // Blur the background
-        var background = document.createElement("div");
-        background.id = _id;
+        var overlay = document.createElement("div");
+        overlay.id = _id;
 
         // Create <div>
-        var overlay = document.createElement("aside");
-        overlay.innerHTML =
+        var modal = document.createElement("aside");
+        modal.innerHTML =
             "<h3>Browser Sync for Visual Studio</h3>" +
             "<p>" +
                 "You can now use <strong>CTRL + Alt + Enter</strong> directly in the browser to synchronize all browsers connected to Visual Studio." +
@@ -45,7 +45,7 @@
                 "<a href=\"https://visualstudiogallery.msdn.microsoft.com/5741a548-5179-4a77-ad96-fca71535774d\" target=\"_blank\">Learn more</a>" +
             "</p>";
 
-        background.appendChild(overlay);
+        overlay.appendChild(modal);
 
         // Create <section>
         var section = document.createElement("section");
@@ -53,7 +53,7 @@
             "<input type=\"checkbox\" id=\"__browserSyncHide\" /> " +
             "<label for=\"__browserSyncHide\">Don't show this again</label>";
 
-        overlay.appendChild(section);
+        modal.appendChild(section);
 
         // Create <button>
         var button = document.createElement("button");
@@ -82,8 +82,8 @@
         "    position: fixed;" +
         "    top: 50%;" +
         "    left: 50%;" +
-        "    width: 360px;" +
-        "    margin-left: -180px;" +
+        "    width: 320px;" +
+        "    margin-left: -160px;" +
         "    margin-top: -150px;" +
         "    color: black;" +
         "    background: white;" +
@@ -93,10 +93,9 @@
         "}" +
 
         "#" + _id + " aside h3 {" +
-        "    padding: 20px 20px 20px 60px;" +
+        "    padding: 20px;" +
         "    margin: 0;" +
         "    font-size: 20px;" +
-        "    background: no-repeat 20px center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA9lBMVEVMaXH+/v7+/v7////+/v7+/v7////////+/v7+/v7////+/v7+/v7+/v7////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7////+/v7+/v7+/v7////+/v7+/v7+/v7+/v7////+/v7+/v7+/v7+/v7+/v7+/v7///9nIXmzkLx1NoZpJHtuK39/RI7x6vL9/P3n3Orz7vT6+PulfLDby9+8ncTUwNlzMoTDqMp4OYiSYJ+ES5LKstHNttOqg7SecapsKH2jeK7i1ebWxNu3lsDp4Oy6msKxjbqof7KGTpTPudWXZ6O1k76NWZucbqfu5/CQXJ3CCcnHAAAAKHRSTlMAo4cEr1QwGPv3PI/ztyg4g5vji2xwp+9gv+toRCQs02QMfMPn189MZxzgQwAAAQBJREFUeNplzud6gjAYBeC4Criqdu85ThAEVIZt3d27938z/RKUQjy/yHkfTsLUnNWKpxpbjXbiPLi4OD9W+nrrp8OjGVm2L+94bS5iStAaR3FfqvoRT0CrGNg/FP2mHto8gYrRC97m+gFjeYws/g8IadV+RzOHQHa3SzDl8RN4kR933RR800+TV1FYj0AKTI9EzvjIAkjkDFRwOuLY76lAvcz9Uxb61H99iMIeZoAyc90Jj+eWMJzSKwPU9jCO5xZQhDOOQuQLhW08S1kAWysCxi6jbGBgpYAot85ktvTRNIFMSrpvqxCnXJ23ufU76KrA6pceta3mDVOjXV03xJV/09RC1IOM3FEAAAAASUVORK5CYIK8BQPdw9xiGVEC9dCESXBa7tSuxvS09sHFvenQ+OIjtyyMKAHdoSF4QKQfJOXGwfGMKNge6sNsBqiV7ycWQv65YpiZ0nCrGJaAOmeZzVzHUguGK/ZCdEoYfbTKUa9j08IhKM6fz5jDULKFsFIqld4b3GUeAZG++DkQYPDbiP6Ow3xoFV/CRXYMlYtjN+wgL1rlbbUd/HI96sEJPpqDSkti+wFe7I1SYqBQfj6J4wRUNp0bwO9RKtpO1T5uhHxFMei0Ou4RY/KpwIuapVJpGA59MHgeHnfOD07gnNPoP+kf4auR3zhsUtaFMHnJPFEMqp6bRKDvGh6O+AR7ahKxAahklljKlkm7Whl+2u3TY7PZ2qHmoK2StkxqbdpClwQm8MD30tfXMSDUFL4Xxkcm0MQ2/R7UPVTI//htkaGqcEi/LSWo0rkSA/wBXFSn91c8Gb0AAAAASUVORK5CYII=);" +
         "}" +
 
         "#" + _id + " aside p {" +
@@ -124,9 +123,9 @@
         "    font-weight: normal;" +
         "}";
 
-        overlay.appendChild(style);
+        modal.appendChild(style);
 
-        return background;
+        return overlay;
     }
 
     return {

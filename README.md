@@ -33,6 +33,26 @@ toolbar lets you know if Browser Link is connected.
 
 ![Browser Link Tooltip](art/browser-link-tooltip.png)
 
+## Welcome message
+The first time after installing this extension, a modal
+overlay will be shown in all connected browser as you run
+your website.
+
+![Browser overlay](art/overlay.png)
+
+This is to advertize the otherwise hidden feature of
+navigational synchronization which is only available through
+a keyboard shortcut in the browser and have no UI of their
+own.
+
+Hitting the **Thanks, got it** button or simply hitting
+the **ESC** key will dismiss the modal for the duration of
+the current Visual Studio session. It will dismiss the modal
+in all the connected browsers.
+
+By checking the checkbox, the modal will never be shown
+again.
+
 ## Form field sync
 This extension registers when typing occurs in these
 HTML elements:
