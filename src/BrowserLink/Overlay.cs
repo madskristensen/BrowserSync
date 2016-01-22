@@ -50,7 +50,7 @@ namespace BrowserSync
             }
             else
             {
-                _showInCurrentVsSession = false;
+                //_showInCurrentVsSession = false;
             }
 
             Browsers.All.Invoke("hideOverlay");

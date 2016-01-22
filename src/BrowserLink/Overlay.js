@@ -40,7 +40,7 @@
         modal.innerHTML =
             "<h3>Browser Sync for Visual Studio</h3>" +
             "<p>" +
-                "You can now use <strong>CTRL + Alt + Enter</strong> directly in the browser to synchronize all browsers connected to Visual Studio." +
+                "You can now use <strong>CTRL + Alt + Enter</strong> directly in the browser to synchronize two or more browsers connected to Visual Studio." +
                 "<br /><br />" +
                 "<a href=\"https://visualstudiogallery.msdn.microsoft.com/5741a548-5179-4a77-ad96-fca71535774d\" target=\"_blank\">Learn more</a>" +
             "</p>";
@@ -75,6 +75,7 @@
         "    left: 0;" +
         "    bottom: 0;" +
         "    right: 0;" +
+        "    z-index: 2147483638;" +
         "    background: rgba(0, 0, 0, .4);" +
         "}" +
 
@@ -87,8 +88,8 @@
         "    margin-top: -150px;" +
         "    color: black;" +
         "    background: white;" +
-        "    z-index: 2147483638;" +
         "    font: 15px/1 arial;" +
+        "    text-align: left;" +
         "    border: 1px solid #c0c0c0;" +
         "}" +
 
@@ -103,6 +104,10 @@
         "    margin: 0;" +
         "    min-height: 200px;" +
         "    line-height: 1.7;" +
+        "}" +
+
+        "#" + _id + " aside a {" +
+        "    color: dodgerblue;" +
         "}" +
 
         "#" + _id + " aside section {" +
