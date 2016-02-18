@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Composition;
+using System.Linq;
 using System.IO;
 using Microsoft.VisualStudio.Web.BrowserLink;
 
@@ -34,7 +35,7 @@ namespace BrowserSync
         [BrowserLinkCallback] // This method can be called from JavaScript
         public void Navigate(int xpos, int ypos)
         {
-            if (VSPackage.Options.EnableNavigationHotkeys)
+            if (VSPackage.Options.EnableNavigationHotkeys && Connections.Connections.Any(c => c != _connection))
             {
                 IClientInvoke others = Browsers.AllExcept(new[] { _connection });
                 others.Invoke("syncNavigate", _connection.Url, xpos, ypos);
@@ -46,7 +47,7 @@ namespace BrowserSync
         [BrowserLinkCallback] // This method can be called from JavaScript
         public void FormSync(string dto)
         {
-            if (VSPackage.Options.EnableFormSync)
+            if (VSPackage.Options.EnableFormSync && Connections.Connections.Any(c => c != _connection))
             {
                 IClientInvoke others = Browsers.AllExcept(new[] { _connection });
                 others.Invoke("syncForm", dto);
