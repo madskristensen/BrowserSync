@@ -31,8 +31,6 @@
             } else if (element[0].contentEditable) {
                 element.html(data.value);
             }
-
-            element.blur();
         }
     }
 
