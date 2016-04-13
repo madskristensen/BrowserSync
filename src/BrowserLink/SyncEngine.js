@@ -45,7 +45,7 @@
             }
         };
 
-        $("body").on("change input blur", "input, textarea, select, [contenteditable]", function () {
+        $("body").on("change input", "input, textarea, select, [contenteditable]", function () {
             var self = $(this);
             var id = self.attr("id");
             var name = self.attr("name");
