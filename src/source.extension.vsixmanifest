@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="10d9b3af-1338-4c45-bc99-4ec38c3a11fb" Version="1.1" Language="en-US" Publisher="Mads Kristensen" />
+        <Identity Id="10d9b3af-1338-4c45-bc99-4ec38c3a11fb" Version="1.2" Language="en-US" Publisher="Mads Kristensen" />
         <DisplayName>Browser Sync</DisplayName>
         <Description xml:space="preserve">A Visual Studio extension for ASP.NET projects that leverages Browser Link to synchronize form field entry, page navigation and scroll position.</Description>
         <MoreInfo>https://github.com/madskristensen/BrowserSync</MoreInfo>

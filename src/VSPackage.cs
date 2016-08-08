@@ -20,8 +20,6 @@ namespace BrowserSync
             Options = (Options)GetDialogPage(typeof(Options));
 
             Logger.Initialize(this, Vsix.Name);
-            Telemetry.Initialize(this, Vsix.Version, "5f7a8b5c-b600-46df-9014-b4cadd33d146");
-
             EnableSyncCommand.Initialize(this);
 
             base.Initialize();

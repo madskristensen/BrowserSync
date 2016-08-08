@@ -39,8 +39,6 @@ namespace BrowserSync
             {
                 IClientInvoke others = Browsers.AllExcept(new[] { _connection });
                 others.Invoke("syncNavigate", _connection.Url, xpos, ypos);
-
-                Telemetry.TrackEvent("Sync navigation");
             }
         }
 
@@ -51,8 +49,6 @@ namespace BrowserSync
             {
                 IClientInvoke others = Browsers.AllExcept(new[] { _connection });
                 others.Invoke("syncForm", dto);
-
-                Telemetry.TrackEvent("Sync form entry");
             }
         }
     }
