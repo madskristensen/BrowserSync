@@ -13,7 +13,7 @@ namespace BrowserSync
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideOptionPage(typeof(Options), "Web", Vsix.Name, 101, 102, true, new string[0], ProvidesLocalizedCategoryName = false)]
     [ProvideAutoLoad(ActivationContextGuid)]
-    [ProvideUIContextRule(ActivationContextGuid, "Load Package",
+    [ProvideUIContextRule(ActivationContextGuid, Vsix.Id,
         "WAP | WebSite | ProjectK | DotNetCoreWeb",
         new string[] {
             "WAP",
