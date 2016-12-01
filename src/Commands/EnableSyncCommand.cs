@@ -8,23 +8,14 @@ namespace BrowserSync
     {
         private readonly Package _package;
 
-        private EnableSyncCommand(Package package)
+        private EnableSyncCommand(Package package, OleMenuCommandService commandService)
         {
-            if (package == null)
-            {
-                throw new ArgumentNullException(nameof(package));
-            }
-
             _package = package;
 
-            OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-            if (commandService != null)
-            {
-                var id = new CommandID(PackageGuids.guidBrowserSyncPackageCmdSet, PackageIds.EnableSyncCommandId);
-                var cmd = new OleMenuCommand(Execute, id);
-                cmd.BeforeQueryStatus += BeforeQueryStatus;
-                commandService.AddCommand(cmd);
-            }
+            var id = new CommandID(PackageGuids.guidBrowserSyncPackageCmdSet, PackageIds.EnableSyncCommandId);
+            var cmd = new OleMenuCommand(Execute, id);
+            cmd.BeforeQueryStatus += BeforeQueryStatus;
+            commandService.AddCommand(cmd);
         }
 
         public static EnableSyncCommand Instance
@@ -38,9 +29,9 @@ namespace BrowserSync
             get { return _package; }
         }
 
-        public static void Initialize(Package package)
+        public static void Initialize(Package package, OleMenuCommandService commandService)
         {
-            Instance = new EnableSyncCommand(package);
+            Instance = new EnableSyncCommand(package, commandService);
         }
 
         private void BeforeQueryStatus(object sender, EventArgs e)
