@@ -34,6 +34,10 @@
         }
     }
 
+    function sendSyncNavigate() {
+        browserLink.invoke("Navigate", window.pageXOffset, window.pageYOffset);
+    }
+
     function connectionHandler() {
 
         document.onkeydown = function (e) {
@@ -41,7 +45,7 @@
 
             if (evt.altKey && evt.ctrlKey && evt.keyCode === 13) {
                 evt.preventDefault();
-                browserLink.invoke("Navigate", window.pageXOffset, window.pageYOffset);
+                SendSyncNavigate();
             }
         };
 
@@ -79,6 +83,11 @@
     return {
         onConnected: connectionHandler, // Fires automatically when Browser Link connects
         syncNavigate: syncNavigation, // Called by SyncEngine.cs
-        syncForm: syncForm  // Called by SyncEngine.cs
+        syncForm: syncForm,  // Called by SyncEngine.cs
+        sendSyncNavigate: sendSyncNavigate,
+        menu: {
+            displayText: 'Browser Sync',
+            'Sync browsers (Ctrl+Alt+Enter)': 'sendSyncNavigate'
+        }
     };
 });
