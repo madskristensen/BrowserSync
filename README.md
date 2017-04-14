@@ -17,11 +17,12 @@ page navigation and scroll position.
 
 ## Feature list
 
-1. Supports **all browsers** and emulators
-2. Typing in input fields is synced across browsers
-3. Keyboard hotkey to navigate all browsers to same URL
-4. Keyboard hotkey to synchronize scroll position
-5. Settings to enable/disable it all
+- Supports **all browsers** and emulators
+- Typing in input fields is synced across browsers
+- Supports the [Web Essentials Chrome extension](https://chrome.google.com/webstore/detail/web-essentials/mghdcdlpcdiodelbplncnodiiadljhhk)
+- Keyboard hotkey to navigate all browsers to same URL
+- Keyboard hotkey to synchronize scroll position
+- Settings to enable/disable it all
 
 For Browser Sync to work, make sure that Visual Studio's
 Browser Link is up and running. Do that by running an
