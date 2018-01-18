@@ -45,7 +45,7 @@
 
             if (evt.altKey && evt.ctrlKey && evt.keyCode === 13) {
                 evt.preventDefault();
-                SendSyncNavigate();
+                sendSyncNavigate();
             }
         };
 
